@@ -1,0 +1,200 @@
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .heading {
+    color: white;
+    font-weight: 600;
+    font-size: large;
+    padding-left: 48%;
+  }
+
+  .score{
+    color: white;
+    font-weight: 600;
+    font-size: large;
+    padding-left: 35%;
+  }
+  .toolbar {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #6d338f;
+  }
+
+  .content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .card svg.material-icons path {
+    fill: #888;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .card {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: white;
+    height: 20px;
+    width: 900px;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  span {
+    font-size: smaller;
+  }
+
+  .card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .card.card-small {
+    height: 16px;
+    width: 168px;
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  }
+
+  .card.highlight-card {
+    background-color:white;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+
+  .card.card.highlight-card span {
+    margin-left: 60px;
+  }
+
+  #frame {
+    border: none;
+    width: 300px;
+    height: 500px;
+  }
+
+  .quiz {
+    border: none;
+    padding: 30px 50px;
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: black;
+    background-color:whitesmoke;
+    font-size: large;
+    font-weight: bold;
+  }
+  button{
+    border: white;
+    background-color: white;
+    font-weight: bold;
+    color:  #333;
+    text-decoration: none;
+    margin: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 500px;
+  }
+
+ 
+
+.choice {
+    color:#125699;
+}
+  
+.correct-result{
+    background-color: rgb(150, 219, 150);
+    padding: 10px 5px;
+}
+
+.wrong-result{
+    background-color: rgb(238, 151, 151);
+    padding: 10px 5px;
+}
+
+.next{
+    background-color: grey;
+    margin-left: 40%;
+    padding: 1%;
+}
+
+.finalResult {
+  padding-left: 32%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 30px;
+  color: #125699;
+}
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }

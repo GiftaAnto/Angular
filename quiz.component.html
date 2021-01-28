@@ -1,0 +1,47 @@
+<div class="toolbar">
+    <span class="heading">Quiz</span>
+    <span [hidden]="scoreUp" class="score">Score: {{mark}}/10</span>
+</div><br><br>
+<div>
+    <div [hidden]="question" class="quiz">
+        <p class='quest'>{{questions[index].id}}. {{questions[index].ques}}</p>
+        <div class="card-container" id="quiz">
+            <div class="card" target="_blank">
+                <button [disabled]="inputcheck" type="checkbox"
+                    (click)="check(questions[index].choice1, questions[index].answer)">
+                    <span class='choice'> A.</span> {{questions[index].choice1}}
+                </button>
+            </div>
+            <div class="card" target="_blank">
+                <button [disabled]="inputcheck" type="checkbox"
+                    (click)="check(questions[index].choice2, questions[index].answer)">
+                    <span class='choice'>B.</span> {{questions[index].choice2}}
+                </button>
+            </div>
+            <div class="card" target="_blank">
+                <button [disabled]="inputcheck" type="checkbox"
+                    (click)="check(questions[index].choice3, questions[index].answer)">
+                    <span class='choice'>C.</span> {{questions[index].choice3}}
+                </button>
+            </div>
+            <div class="card" target="_blank">
+                <button [disabled]="inputcheck" type="checkbox"
+                    (click)="check(questions[index].choice4, questions[index].answer)">
+                    <span class='choice'>D.</span> {{questions[index].choice4}}
+                </button>
+            </div>
+        </div><br>
+        <button [hidden]="nextButton" (click)="next()" class="next" ng-model='checkbutton'>Next
+            Question</button>
+        <button [hidden]="result" (click)="score()" class="next" ng-model='checkbutton'>View my score</button><br><br>
+        <div [hidden]="correct" class="correct-result">Hurray!!! Your answer is correct</div>
+        <div [hidden]="wrong" class="wrong-result">Your answer is wrong!!!<br>The right answer is
+            {{questions[index].answer}}</div>
+
+    </div>
+    <div [hidden]="scoreElement" class="quiz">
+        <div class="card-container">
+                <span class="finalResult">Your Score is {{mark}}</span>
+        </div>
+    </div>
+</div>
